@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Finance theme specific colors
+				finance: {
+					up: '#00C805',
+					down: '#FF5000',
+					neutral: '#7D8596',
+					highlight: '#0075FF',
+					grid: '#202940',
+					dataPoint: '#4DABF7',
+					chart: {
+						line: '#29B6F6',
+						area: 'rgba(41, 182, 246, 0.2)',
+						bar: '#4A6FF3',
+						candle: {
+							up: '#26A69A',
+							down: '#EF5350',
+							wick: '#B0BEC5'
+						}
+					}
 				}
 			},
 			borderRadius: {
@@ -84,11 +104,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'data-pulse': {
+					'0%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+					'100%': { opacity: '1' }
+				},
+				'progress-loading': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'data-pulse': 'data-pulse 1.5s infinite',
+				'progress-loading': 'progress-loading 3s ease-in-out infinite'
 			}
 		}
 	},
